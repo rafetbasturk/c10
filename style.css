@@ -55,9 +55,11 @@ span{
 
 #avatar-box{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin-top: 20px;
     height: 40px;
+    position: relative;
 }
 
 #image-name{
@@ -78,23 +80,18 @@ span{
     color: hsl(212, 23%, 69%);
 }
 
-#share-box{
-    position: relative;
-    background-color: hsl(210, 46%, 95%);
-    padding: 8.5px 10px;
+button{
+    width: 32px;
+    height: 32px;
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    margin-top: 5px;
+    background-color: hsl(210, 46%, 95%);
     z-index: 30;
 }
 
-#share{
-    color: white;
-}
-
-#share-box-mobile{
-    display: none;
+button:hover{
+    background-color: hsl(217, 19%, 35%);
 }
 
 #share-tip{
@@ -106,24 +103,8 @@ span{
     border-radius: 10px;
     position: absolute;
     top: -80px;
-    right: -107px;
+    right: -109px;
     text-align: center;
-}
-
-#share-tip li{
-    display: inline-block;
-    letter-spacing: 5px;
-    line-height: 40px;
-    margin: auto 5px;
-}
-
-a{
-    color: hsl(212, 23%, 69%);
-    text-decoration: none;
-}
-
-img{
-    vertical-align: middle;
 }
 
 #share-tip::after{
@@ -135,16 +116,28 @@ img{
 	border-top-color: hsl(217, 19%, 35%);
 }
 
-#share-box:hover{
-    background-color: hsl(217, 19%, 35%);
+#share-tip li{
+    display: inline-block;
+    letter-spacing: 5px;
+    line-height: 40px;
+    margin: auto 5px;
 }
 
-#share-box:hover #share-tip{
-    display: block;
+#share-tip img{
+    vertical-align: middle;
+}
+
+a{
+    color: hsl(212, 23%, 69%);
+    text-decoration: none;
 }
 
 a:hover{
     opacity: .6;
+}
+
+#share-box-mobile{
+    display: none;
 }
 
 @media (max-width: 800px){
@@ -201,38 +194,17 @@ a:hover{
         z-index: 10;
     }
 
-    #share-box-mobile{
-        display: none;
-        letter-spacing: 5px;
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background-color: hsl(217, 19%, 35%);
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
+    #share-tip{
+        width: 325px;
+        top: -20px;
+        right: -30px;
         z-index: 20;
+        text-align: left;
+        padding: 20px 30px;
+        border-radius: 0 0 10px 10px;
     }
 
-    #share-tip-mobile{
-        list-style: none;
-        padding: 15px 30px;
-    }
-
-    #share-tip-mobile li{
-        display: inline-block;
-        padding: 10px 5px;
-    }
-
-    #share-box:hover #share-tip{
+    #share-tip::after {
         display: none;
-    }
-
-    #share-box:hover{
-        background-color: hsl(212, 23%, 69%);
-    }
-
-    #share-box:hover + #share-box-mobile{
-        display: flex;
     }
 }
