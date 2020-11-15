@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(210, 46%, 95%);
+    font-size: 13px;
+    font-family: 'Manrope', sans-serif;
+}
+
+#main-container{
+    width: 730px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#container{
+    background-color: white;
+    display: flex;
+    border-radius: 10px;
+}
+
+#drawer-mobile{
+    display: none;
+}
+
+#drawer{
+    width: 285px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    flex: 40%;
+    background: url(./images/drawers.jpg) right -67px bottom 0;
+    background-size: 123%;
+}
+
+#text{
+    padding: 30px 40px;
+    flex: 60%;
+}
+
+h2{
+    color: hsl(217, 19%, 35%);
+    margin-bottom: 20px;
+}
+
+span{
+    color: hsl(212, 23%, 69%);
+}
+
+#avatar-box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#image-name{
+    display: flex;
+}
+
+#avatar{
+    width: 40px;
+    border-radius: 50%;
+}
+
+#name{
+    line-height: 20px;
+    margin-left: 15px;
+}
+
+#date{
+    color: hsl(212, 23%, 69%);
+}
+
+#share-box{
+    position: relative;
+    background-color: hsl(210, 46%, 95%);
+    padding: 8.5px 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 5px;
+    z-index: 30;
+}
+
+#share{
+    color: white;
+}
+
+#share-box-mobile{
+    display: none;
+}
+
+#share-tip{
+    display: none;
+    width: 250px;
+    list-style: none;
+    background-color: hsl(217, 19%, 35%);
+    padding: 10px 20px;    
+    border-radius: 10px;
+    position: absolute;
+    top: -80px;
+    right: -107px;
+    text-align: center;
+}
+
+#share-tip li{
+    display: inline-block;
+    letter-spacing: 5px;
+    line-height: 40px;
+    margin: auto 5px;
+}
+
+a{
+    color: hsl(212, 23%, 69%);
+    text-decoration: none;
+}
+
+img{
+    vertical-align: middle;
+}
+
+#share-tip::after{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 115px;
+	border: 10px solid transparent;
+	border-top-color: hsl(217, 19%, 35%);
+}
+
+#share-box:hover{
+    background-color: hsl(217, 19%, 35%);
+}
+
+#share-box:hover #share-tip{
+    display: block;
+}
+
+a:hover{
+    opacity: .6;
+}
+
+@media (max-width: 800px){
+    
+    #main-container{
+        width: 325px;
+        height: 100vh;
+    }
+    
+    #container{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #drawer{
+        display: none;
+    }
+
+    #drawer-mobile{
+        display: flex;
+        width: 100%;
+        min-height: 200px;
+        background: url(./images/drawers.jpg) no-repeat right 0 bottom -45px;
+        background-size: cover;
+        border-radius: 10px 10px 0 0;
+    }
+
+    #text{
+        width: 100%;
+        padding: 0;
+        position: relative;
+    }
+
+    h2, span{
+        display: block;
+        margin: 30px;
+        line-height: 1.5;
+    }
+
+    h2{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    span{
+        font-size: 13px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    #avatar-box{
+        margin: 30px 30px 20px;
+        z-index: 10;
+    }
+
+    #share-box-mobile{
+        display: none;
+        letter-spacing: 5px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: hsl(217, 19%, 35%);
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        z-index: 20;
+    }
+
+    #share-tip-mobile{
+        list-style: none;
+        padding: 15px 30px;
+    }
+
+    #share-tip-mobile li{
+        display: inline-block;
+        padding: 10px 5px;
+    }
+
+    #share-box:hover #share-tip{
+        display: none;
+    }
+
+    #share-box:hover{
+        background-color: hsl(212, 23%, 69%);
+    }
+
+    #share-box:hover + #share-box-mobile{
+        display: flex;
+    }
+}
