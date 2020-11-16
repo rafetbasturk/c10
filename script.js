@@ -1,5 +1,5 @@
 $(function(){
-    $("button").on("click", function(){
+    $("button").click(function(){
         $("#share-tip").toggle();
     });
 });

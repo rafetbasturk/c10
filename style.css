@@ -94,6 +94,10 @@ button:hover{
     background-color: hsl(217, 19%, 35%);
 }
 
+button:hover svg path{
+    fill: #fff;
+}
+
 #share-tip{
     display: none;
     width: 250px;
@@ -192,6 +196,10 @@ a:hover{
     #avatar-box{
         margin: 30px 30px 20px;
         z-index: 10;
+    }
+
+    button:hover{
+        background-color: hsl(212, 23%, 69%);
     }
 
     #share-tip{
