@@ -64,6 +64,7 @@ span{
 
 #image-name{
     display: flex;
+    height: 40px;
 }
 
 #avatar{
